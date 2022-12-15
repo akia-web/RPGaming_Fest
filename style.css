@@ -25,8 +25,8 @@ body {
   height: 50px;
 }
 .ContainerHeader {
-  display: none;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   width: 80%;
   margin: 0 auto;
   align-items: center;
@@ -46,10 +46,6 @@ body {
   height: 100px;
 }
 
-.minScreen {
-  display: flex;
-  justify-content: center;
-}
 .logoDragon2 {
   width: 80px;
   height: 80px;
@@ -178,7 +174,7 @@ footer div h2 {
 }
 .containerImg {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 80%;
   margin: 0 auto;
 }
@@ -283,14 +279,6 @@ h4 {
   justify-content: center;
 }
 @media (min-width: 1250px) {
-  .fullscreen {
-    display: flex;
-  }
-
-  .minScreen {
-    display: none;
-  }
-
   .baniere {
     height: 63vh;
   }
