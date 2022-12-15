@@ -4,16 +4,21 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.opacity {
+  filter: grayscale(70%);
+}
 a {
   text-decoration: none;
   color: white;
+  transition: 0.2s ease-in-out;
 }
 
-a:hover{
-    color : rgb(203, 202, 202);
+a:hover {
+  color: rgb(203, 202, 202);
 }
 body {
   background-color: rgb(246, 246, 246);
+  overflow-x: hidden;
 }
 .logo {
   width: 50px;
@@ -64,7 +69,13 @@ body {
   background-position: 0% 47%;
   background-size: 100%;
 }
-
+.intro {
+  width: 90%;
+  margin: 2em auto 0;
+  background-color: rgba(255, 255, 255, 0.888);
+  padding: 30px;
+  border-radius: 7px;
+}
 .carreRouge {
   background-color: red;
   display: flex;
@@ -171,6 +182,106 @@ footer div h2 {
   width: 80%;
   margin: 0 auto;
 }
+
+.popup {
+  background-color: red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 15px;
+}
+
+h4 {
+  font-size: 13px;
+  margin-bottom: 2em;
+}
+.textpopup {
+  font-size: 11px;
+  margin-bottom: 2em;
+}
+.ferme {
+  left: 50%;
+  animation-name: fermer;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+.fermer {
+  left: 150%;
+}
+.ouvrir {
+  animation-name: ouvrir;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes ouvrir {
+  from {
+    left: 150%;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes fermer {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+
+@keyframes opacity {
+  from {
+    filter: grayscale(0);
+  }
+  to {
+    filter: grayscale(70%);
+  }
+}
+
+.close {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.close p {
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.close p:hover {
+  color: lightgray;
+  transform: scale(1.5);
+}
+
+.boutonBlanc {
+  background-color: white;
+  color: black;
+  width: 80%;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.containerBouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (min-width: 1250px) {
   .fullscreen {
     display: flex;
@@ -208,7 +319,7 @@ footer div h2 {
   footer {
     flex-direction: row;
     justify-content: space-around;
-    padding: 0;
+    padding: 20px;
     align-items: flex-start;
   }
 
@@ -217,5 +328,17 @@ footer div h2 {
   }
   footer div h2:not(.non) {
     margin-top: 0;
+  }
+
+  .popup {
+    width: 50%;
+  }
+
+  .boutonBlanc {
+    width: 60%;
+  }
+
+  .intro {
+    margin: -23em auto 6em;
   }
 }
