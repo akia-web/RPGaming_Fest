@@ -82,6 +82,12 @@ body {
   border-radius: 7px;
   color: white;
   margin: 0 auto;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.carreRouge:hover {
+  background-color: rgb(162, 160, 160);
 }
 .rouge {
   color: red;
